@@ -31,7 +31,7 @@ static void fast_math() {
 
 #ifndef DEFAULT_ES
 // forcing GLES 1.1 for now
-#define DEFAULT_ES 1
+#define DEFAULT_ES 2
 #endif
 
 void load_libs();
