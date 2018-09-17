@@ -22,6 +22,9 @@ if(BCMHOST)
     include_directories(/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux)
     link_directories(/opt/vc/lib)
     add_definitions(-DBCMHOST)
+    set(NOX11 ON)
+    set(NOEGL ON)
+    add_definitions(-marm -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -ffast-math -fomit-frame-pointer)    
 endif()
 
 # Pandora
@@ -34,6 +37,9 @@ endif()
 # ODROID
 if(ODROID)
     add_definitions(-DODROID)
+    set(NOX11 ON)
+    set(NOEGL ON)
+    add_definitions(-marm -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -ffast-math -fomit-frame-pointer)    
 endif()
 
 #PocketCHIP
